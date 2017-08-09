@@ -1,18 +1,16 @@
 class Shape:
-    color = None
-    filled = None
+    color = 'red'
+    filled = True
 
-    def __init__(self):
-        global color
-        color = 'red'
-        global filled
-        filled = True
-
-    def Shape(self, input_color, input_filled):
+    def __init__(self, input_color, input_filled):
         global color
         global filled
-        color = input_color
-        filled = input_filled
+
+        if input_color:
+            color = input_color
+
+        if input_filled:
+            filled = input_filled
 
     def getColor(self):
         global color
